@@ -3,6 +3,8 @@ import Logo from '../component/image/logo-image.png';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Cookies from 'js-cookie';
 
 export default function Login() {
   const router = useRouter();

@@ -6,7 +6,7 @@ export async function middleware(request) {
   console.log('token', token);
   const isLogin = token == undefined ? false : true;
   if (isLogin == false) {
-    return NextResponse.redirect(new URL('/', request.url)); // Redirect to home page if not logged in
+    return NextResponse.redirect(new URL('/login', request.url)); // Redirect to home page if not logged in
   }
 
   return NextResponse.next(); // Allow the request to proceed
