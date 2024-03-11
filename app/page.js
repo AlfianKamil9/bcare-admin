@@ -15,28 +15,24 @@ export default function Home() {
   const [isFalse, setIsFalse] = useState(false);
 
   const handleLogin = async (e) => {
-    try {
-      e.preventDefault();
-      const res = await axios.post(`http://34.101.42.219:5000/api/v1/login`, {
-        email,
-        password,
+    e.preventDefault();
+    const res = await axios.post(`http://34.101.42.219:5000/api/v1/login`, {
+      email,
+      password,
+    });
+    if (res.data.code == 200) {
+      Cookies.set('token', res.data.token, {
+        expires: 1,
+        // secure: true, // Restrict to HTTPS connections
+        // httpOnly: true,
       });
-      if (res.data.code == 200) {
-        Cookies.set('token', res.data.token, {
-          expires: 1,
-          // secure: true, // Restrict to HTTPS connections
-          // httpOnly: true,
-        });
 
-        window.location.href = '/dashboard';
-      } else {
-        setTimeout(() => {
-          setIsFalse(true);
-          setIsFalse(false);
-        }, 3000);
-      }
-    } catch (error) {
-      console.log(error);
+      window.location.href = '/dashboard';
+    } else {
+      setTimeout(() => {
+        setIsFalse(true);
+        setIsFalse(false);
+      }, 3000);
     }
   };
   useEffect(() => {
