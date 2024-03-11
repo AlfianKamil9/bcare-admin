@@ -15,9 +15,8 @@ export default function Home() {
   const [isFalse, setIsFalse] = useState(false);
 
   const handleLogin = async (e) => {
-    e.preventDefault();
     try {
-      //console.log(email, password);
+      e.preventDefault();
       const res = await axios.post(`http://34.101.42.219:5000/api/v1/login`, {
         email,
         password,
@@ -38,10 +37,6 @@ export default function Home() {
       }
     } catch (error) {
       console.log(error);
-      setIsFalse(true);
-      setTimeout(() => {
-        setIsFalse(false);
-      }, 3000);
     }
   };
   useEffect(() => {
