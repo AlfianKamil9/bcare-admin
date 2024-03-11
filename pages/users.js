@@ -10,7 +10,7 @@ const Users = () => {
   let i = 1;
   const fetchUsers = async (token) => {
     try {
-      const res = await axios.get('http://34.101.42.219:5000/api/admin-only/v1/users', {
+      const res = await axios.get('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/users', {
         headers: {
           Authorization: `Bearer ${token}`, // Sertakan token dalam header Authorization
         },

@@ -15,7 +15,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     try {
       e.preventDefault();
-      const res = await axios.post(`http://34.101.42.219:5000/api/v1/login`, {
+      const res = await axios.post(`https://pragmatic-aegis-417023.et.r.appspot.com/api/v1/login`, {
         email,
         password,
       });

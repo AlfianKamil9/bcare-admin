@@ -74,7 +74,7 @@ const Konselings = () => {
   // FETCH KONSELOR
   const fetchKonselor = async (token) => {
     try {
-      const res = await axios.get('http://34.101.42.219:5000/api/admin-only/v1/konselor', {
+      const res = await axios.get('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/konselor', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -87,7 +87,7 @@ const Konselings = () => {
   // FETCH KONSELING
   const fetchKonseling = async (token) => {
     try {
-      const res = await axios.get('http://34.101.42.219:5000/api/v1/konseling', {
+      const res = await axios.get('https://pragmatic-aegis-417023.et.r.appspot.com/api/v1/konseling', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -98,7 +98,7 @@ const Konselings = () => {
   // ADD KONSELING
   const addKonseling = async (tokens, body) => {
     try {
-      const res = await axios.post('http://34.101.42.219:5000/api/admin-only/v1/konseling', body, {
+      const res = await axios.post('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/konseling', body, {
         headers: {
           Authorization: `Bearer ${tokens}`,
           'Content-Type': 'multipart/form-data',
@@ -114,7 +114,7 @@ const Konselings = () => {
   // DELETE KONSELING
   const deleteKonseling = async (tokens, id) => {
     try {
-      const res = await axios.delete('http://34.101.42.219:5000/api/admin-only/v1/konseling/' + id, {
+      const res = await axios.delete('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/konseling/' + id, {
         headers: {
           Authorization: `Bearer ${tokens}`,
         },
@@ -127,7 +127,7 @@ const Konselings = () => {
   // EDIT KONSELING
   const editKonseling = async (tokens, id, body) => {
     try {
-      const res = await axios.put('http://34.101.42.219:5000/api/admin-only/v1/konseling/' + id, body, {
+      const res = await axios.put('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/konseling/' + id, body, {
         headers: {
           Authorization: `Bearer ${tokens}`,
         },

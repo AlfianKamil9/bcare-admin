@@ -70,7 +70,7 @@ const Konselors = () => {
 
   const fetchKonselor = async (token) => {
     try {
-      const res = await axios.get('http://34.101.42.219:5000/api/admin-only/v1/konselor', {
+      const res = await axios.get('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/konselor', {
         headers: {
           Authorization: `Bearer ${token}`, // Sertakan token dalam header Authorization
         },
@@ -81,7 +81,7 @@ const Konselors = () => {
   // ADD KONSELOR
   const addKonselor = async (tokens, body) => {
     try {
-      const res = await axios.post('http://34.101.42.219:5000/api/admin-only/v1/konselor', body, {
+      const res = await axios.post('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/konselor', body, {
         headers: {
           Authorization: `Bearer ${tokens}`,
           'Content-Type': 'multipart/form-data',
@@ -97,7 +97,7 @@ const Konselors = () => {
   // DELETE KONSELING
   const deleteKonselor = async (tokens, id) => {
     try {
-      const res = await axios.delete('http://34.101.42.219:5000/api/admin-only/v1/konselor/' + id, {
+      const res = await axios.delete('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/konselor/' + id, {
         headers: {
           Authorization: `Bearer ${tokens}`,
         },
@@ -110,7 +110,7 @@ const Konselors = () => {
   // EDIT KONSELING
   const editKonselor = async (tokens, id, body) => {
     try {
-      const res = await axios.put('http://34.101.42.219:5000/api/admin-only/v1/konselor/' + id, body, {
+      const res = await axios.put('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/konselor/' + id, body, {
         headers: {
           Authorization: `Bearer ${tokens}`,
         },

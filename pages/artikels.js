@@ -80,7 +80,7 @@ const Artikels = () => {
   // FETCH CATEGORIES
   const fetchCategories = async (token) => {
     try {
-      const res = await axios.get('http://34.101.42.219:5000/api/v1/category', {
+      const res = await axios.get('https://pragmatic-aegis-417023.et.r.appspot.com/api/v1/category', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -93,7 +93,7 @@ const Artikels = () => {
   // FETCH ARTIKELS
   const fetchArtikels = async (token) => {
     try {
-      const res = await axios.get('http://34.101.42.219:5000/api/v1/artikel', {
+      const res = await axios.get('https://pragmatic-aegis-417023.et.r.appspot.com/api/v1/artikel', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -104,7 +104,7 @@ const Artikels = () => {
   // DELETE ARTICLES
   const deleteArtikels = async (tokens, id) => {
     try {
-      const res = await axios.delete('http://34.101.42.219:5000/api/admin-only/v1/article/' + id, {
+      const res = await axios.delete('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/article/' + id, {
         headers: {
           Authorization: `Bearer ${tokens}`,
         },
@@ -116,7 +116,7 @@ const Artikels = () => {
   // ADD ARTIKELS
   const addArtikels = async (tokens, body) => {
     try {
-      const res = await axios.post('http://34.101.42.219:5000/api/admin-only/v1/article', body, {
+      const res = await axios.post('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/article', body, {
         headers: {
           Authorization: `Bearer ${tokens}`,
           'Content-Type': 'multipart/form-data',
@@ -131,7 +131,7 @@ const Artikels = () => {
   // EDIT ARTIKELS
   const editArtikels = async (tokens, id, body) => {
     try {
-      const res = await axios.put('http://34.101.42.219:5000/api/admin-only/v1/article/' + id, body, {
+      const res = await axios.put('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/article/' + id, body, {
         headers: {
           Authorization: `Bearer ${tokens}`,
           'Content-Type': 'multipart/form-data',

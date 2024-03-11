@@ -48,7 +48,7 @@ export default function Categories() {
 
   const fetchCategories = async (token) => {
     try {
-      const res = await axios.get('http://34.101.42.219:5000/api/v1/category', {
+      const res = await axios.get('https://pragmatic-aegis-417023.et.r.appspot.com/api/v1/category', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -59,7 +59,7 @@ export default function Categories() {
 
   const deleteCategories = async (token, id) => {
     try {
-      const res = await axios.delete('http://34.101.42.219:5000/api/admin-only/v1/category/' + id, {
+      const res = await axios.delete('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/category/' + id, {
         headers: {
           Authorization: `Bearer ${tokens}`,
         },
@@ -71,7 +71,7 @@ export default function Categories() {
 
   const editCategories = async (tokens, body, id) => {
     try {
-      const res = await axios.put('http://34.101.42.219:5000/api/admin-only/v1/category/' + id, body, {
+      const res = await axios.put('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/category/' + id, body, {
         headers: {
           Authorization: `Bearer ${tokens}`,
         },
@@ -85,7 +85,7 @@ export default function Categories() {
 
   const addCategories = async (tokens, body) => {
     try {
-      const res = await axios.post('http://34.101.42.219:5000/api/admin-only/v1/category', body, {
+      const res = await axios.post('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/category', body, {
         headers: {
           Authorization: `Bearer ${tokens}`,
         },
