@@ -11,7 +11,7 @@ const Sidebar = () => {
   const logout = async () => {
     try {
       const token = Cookies.get('token');
-      await axios.delete('https://pragmatic-aegis-417023.et.r.appspot.com/api/v1/logout', {
+      await axios.delete('https://backend-hwy6vx3s6a-uc.a.run.app/api/v1/logout', {
         headers: {
           Authorization: `Bearer ${token}`,
         },

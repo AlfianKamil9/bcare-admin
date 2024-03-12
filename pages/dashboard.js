@@ -16,7 +16,7 @@ const Dashboard = () => {
 
   const fetchKonselor = async (token) => {
     try {
-      const res = await axios.get('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/konselor', {
+      const res = await axios.get('https://backend-hwy6vx3s6a-uc.a.run.app/api/admin-only/v1/konselor', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -28,7 +28,7 @@ const Dashboard = () => {
   };
   const fetchVideo = async (token) => {
     try {
-      const res = await axios.get('https://pragmatic-aegis-417023.et.r.appspot.com/api/v1/video', {
+      const res = await axios.get('https://backend-hwy6vx3s6a-uc.a.run.app/api/v1/video', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -38,7 +38,7 @@ const Dashboard = () => {
   };
   const fetchKonseling = async (token) => {
     try {
-      const res = await axios.get('https://pragmatic-aegis-417023.et.r.appspot.com/api/v1/konseling', {
+      const res = await axios.get('https://backend-hwy6vx3s6a-uc.a.run.app/api/v1/konseling', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -49,7 +49,7 @@ const Dashboard = () => {
 
   const fetchArtikels = async (token) => {
     try {
-      const res = await axios.get('https://pragmatic-aegis-417023.et.r.appspot.com/api/v1/artikel', {
+      const res = await axios.get('https://backend-hwy6vx3s6a-uc.a.run.app/api/v1/artikel', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -60,7 +60,7 @@ const Dashboard = () => {
 
   const fetchUsers = async (token) => {
     try {
-      const res = await axios.get('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/users', {
+      const res = await axios.get('https://backend-hwy6vx3s6a-uc.a.run.app/api/admin-only/v1/users', {
         headers: {
           Authorization: `Bearer ${token}`, // Sertakan token dalam header Authorization
         },
@@ -70,7 +70,7 @@ const Dashboard = () => {
     } catch (error) {}
   };
   const fetchOrder = async (token) => {
-    const res = await axios.get('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/order-konseling', {
+    const res = await axios.get('https://backend-hwy6vx3s6a-uc.a.run.app/api/admin-only/v1/order-konseling', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -78,7 +78,7 @@ const Dashboard = () => {
     setGetOrder(res.data.data);
   };
   const fetchOrderStatus = async (token, status) => {
-    const res = await axios.get('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/order-konseling/' + status, {
+    const res = await axios.get('https://backend-hwy6vx3s6a-uc.a.run.app/api/admin-only/v1/order-konseling/' + status, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

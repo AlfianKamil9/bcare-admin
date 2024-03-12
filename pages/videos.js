@@ -78,7 +78,7 @@ const Videos = () => {
   // FETCH CATEGORIES
   const fetchCategories = async (token) => {
     try {
-      const res = await axios.get('https://pragmatic-aegis-417023.et.r.appspot.com/api/v1/category', {
+      const res = await axios.get('https://backend-hwy6vx3s6a-uc.a.run.app/api/v1/category', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -91,7 +91,7 @@ const Videos = () => {
   // FETCH VIDEO
   const fetchVideo = async (token) => {
     try {
-      const res = await axios.get('https://pragmatic-aegis-417023.et.r.appspot.com/api/v1/video', {
+      const res = await axios.get('https://backend-hwy6vx3s6a-uc.a.run.app/api/v1/video', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -102,7 +102,7 @@ const Videos = () => {
   // ADD VIDEO
   const addVideos = async (token, body) => {
     try {
-      const res = await axios.post('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/video', body, {
+      const res = await axios.post('https://backend-hwy6vx3s6a-uc.a.run.app/api/admin-only/v1/video', body, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',
@@ -118,7 +118,7 @@ const Videos = () => {
   // DELETE VIDEO
   const deleteVideo = async (tokens, id) => {
     try {
-      const res = await axios.delete('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/video/' + id, {
+      const res = await axios.delete('https://backend-hwy6vx3s6a-uc.a.run.app/api/admin-only/v1/video/' + id, {
         headers: {
           Authorization: `Bearer ${tokens}`,
         },
@@ -130,7 +130,7 @@ const Videos = () => {
   // DELETE VIDEO
   const editVideo = async (tokens, id, body) => {
     try {
-      const res = await axios.put('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/video/' + id, body, {
+      const res = await axios.put('https://backend-hwy6vx3s6a-uc.a.run.app/api/admin-only/v1/video/' + id, body, {
         headers: {
           Authorization: `Bearer ${tokens}`,
         },

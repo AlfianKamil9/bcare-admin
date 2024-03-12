@@ -44,7 +44,7 @@ const Orders = () => {
 
   const fetchOrder = async (token) => {
     try {
-      const res = await axios.get('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/order-konseling', {
+      const res = await axios.get('https://backend-hwy6vx3s6a-uc.a.run.app/api/admin-only/v1/order-konseling', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -57,7 +57,7 @@ const Orders = () => {
 
   const declineOrder = async (token, ref) => {
     try {
-      const res = await axios.delete('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/order-konseling/rejecting/' + ref, {
+      const res = await axios.delete('https://backend-hwy6vx3s6a-uc.a.run.app/api/admin-only/v1/order-konseling/rejecting/' + ref, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -70,7 +70,7 @@ const Orders = () => {
 
   const acceptOrder = async (token, ref, body) => {
     try {
-      const res = await axios.put('https://pragmatic-aegis-417023.et.r.appspot.com/api/admin-only/v1/order-konseling/accepting/' + ref, body, {
+      const res = await axios.put('https://backend-hwy6vx3s6a-uc.a.run.app/api/admin-only/v1/order-konseling/accepting/' + ref, body, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
